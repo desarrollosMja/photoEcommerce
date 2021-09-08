@@ -6,7 +6,6 @@ const App = () => {
     return (
         <>
             <header>
-                <h1>La cafetería de Jose</h1>
                 <NavBar/>
             </header>
             <ItemListContainer saludo="Bienvenidos a mi E-Commerce"/>

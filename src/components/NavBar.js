@@ -1,13 +1,22 @@
 import CartWidget from "./CartWidget"
+import Navbar from "react-bootstrap/Navbar"
+import Container from "react-bootstrap/Container"
+import Nav from "react-bootstrap/Nav"
 
 const NavBar = () => {
     return (
-        <nav>
-            <a href="#index">En grano </a>
-            <a href="#index">Molido </a>
-            <a href="#index">Torrado </a>
-            <CartWidget/>
-        </nav>
+
+        <Navbar bg="primary" variant="dark">
+            <Container>
+                <Navbar.Brand href="#home">La cafetería de Jose</Navbar.Brand>
+                <Nav className="me-auto" variant="pills">
+                    <Nav.Link href="#home">Quienes somos</Nav.Link>
+                    <Nav.Link href="#features">Nuestros productos</Nav.Link>
+                    <Nav.Link href="#pricing">Contacto</Nav.Link>
+                </Nav>
+                <CartWidget/>
+            </Container>
+        </Navbar>
     )
 }
 
