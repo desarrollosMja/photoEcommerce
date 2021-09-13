@@ -6,23 +6,53 @@
 /*Clases generales*/
 
 header{
+
+    h1{
+        color: teal;
+    }
+
     a{
         text-decoration: none;
         margin: 10px;
         padding: 10px;
     }
 
-    #iconoCarrito{
-        border: solid 1px white;
-        border-radius: 5px;
-        padding: 10px;
-        margin-bottom: 5px;
-        background-color: white;
+    .navbar-nav{
+        width: inherit;
+    }
+
+    button{
+        width: 200px;
     }
 }
 
-header h1,nav{
-    margin-top: 15px;
+#item{
+    width: 100px;
+    margin-left: 50px;
+    border: solid 1px black;
+    padding: 10px;
+
+    #incrementar, #decrementar{
+        padding: 5px;
+        display: inline-block;
+    }
+    
+    #incrementar{
+        float: left;
+    }
+    
+    #decrementar{
+        float: right;
+    }
+    
+    #contadorPlace{
+        display: inline-block;
+        margin-left: 18%;
+        margin-top: 5px;
+    }
 }
+
+
+
 
 
