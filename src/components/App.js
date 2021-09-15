@@ -1,16 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './Header';
 import ItemCount from './ItemCount';
 import ItemListContainer from "./ItemListContainer";
-import NavBar from "./NavBar"
 
 const App = () => {
 
     return (
         <>
-            <header>
-                <NavBar/>
-            </header>
-            <ItemListContainer saludo="Bienvenidos a mi E-Commerce"/>
+            <Header/>
+            <ItemListContainer/>
             <ItemCount stock={5} initial={1} onAdd={() => {}}/>
         </>
     )
