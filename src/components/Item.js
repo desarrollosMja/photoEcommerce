@@ -7,7 +7,7 @@ const Item = (props) => {
 
     return (
         <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={pictureUrl} />
+            <Card.Img variant="top" src={pictureUrl} style={{ width: '300px', height: "auto" }} />
             <Card.Body>
                 <Card.Title>{name}</Card.Title>
                 <Card.Text>

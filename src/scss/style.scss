@@ -5,7 +5,7 @@
 
 /*Clases generales*/
 
-header{
+#encabezado{
 
     h1{
         color: teal;
@@ -24,6 +24,12 @@ header{
     button{
         width: 200px;
     }
+}
+
+#contenedorItems{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
 }
 
 #item{
