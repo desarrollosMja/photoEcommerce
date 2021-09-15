@@ -15105,18 +15105,18 @@ textarea.form-control-lg {
   padding: 0; }
 
 /*Clases generales*/
-#encabezado h1, #encabezado .h1 {
+nav h1, nav .h1 {
   color: teal; }
 
-#encabezado a {
+nav a {
   text-decoration: none;
   margin: 10px;
   padding: 10px; }
 
-#encabezado .navbar-nav {
+nav .navbar-nav {
   width: inherit; }
 
-#encabezado button {
+nav button {
   width: 200px; }
 
 #contenedorItems {

@@ -7,7 +7,7 @@ const App = () => {
 
     return (
         <>
-            <Header id="encabezado"/>
+            <Header/>
             <ItemListContainer/>
             <ItemCount stock={5} initial={1} onAdd={() => {}}/>
         </>
