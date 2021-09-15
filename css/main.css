@@ -15123,20 +15123,15 @@ nav button {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start; }
+  #contenedorItems .box-shadow {
+    box-shadow: 1px 1px 5px 2px lightgray; }
 
 #item {
-  width: 100px;
-  margin-left: 50px;
-  border: solid 1px black;
-  padding: 10px; }
+  width: 80px;
+  margin-left: 10px; }
   #item #incrementar, #item #decrementar {
-    padding: 5px;
-    display: inline-block; }
-  #item #incrementar {
-    float: left; }
-  #item #decrementar {
-    float: right; }
+    padding: 5px; }
   #item #contadorPlace {
-    display: inline-block;
-    margin-left: 18%;
-    margin-top: 5px; }
+    margin-top: 15px;
+    padding: 4px;
+    border: solid 1px lightgray; }
