@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Header';
 import ItemListContainer from "./ItemListContainer";
+import ItemDetailContainer from "./ItemDetailContainer";
 
 const App = () => {
 
@@ -8,6 +9,7 @@ const App = () => {
         <>
             <Header/>
             <ItemListContainer/>
+            <ItemDetailContainer/>
         </>
     )
 }
