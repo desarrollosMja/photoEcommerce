@@ -1,6 +1,6 @@
 import Card from "react-bootstrap/Card"
 import Button from "react-bootstrap/Button"
-import ItemCount from "./ItemCount"
+import ItemCount from "../ItemList/ItemCount"
 
 const ItemDetail = (props) => {
 
