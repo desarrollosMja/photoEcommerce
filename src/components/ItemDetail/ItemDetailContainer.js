@@ -1,17 +1,24 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
+import { arrayProductos } from "../../datos";
 
 const ItemDetailContainer = () => {
 
     const [producto, setProducto] = useState({})
+    const parametros = useParams()
+
+    //console.log(props)
 
     useEffect(() => {
 
-        setTimeout(() => {
-            fetch("https://api.mercadolibre.com/items?ids=MLA788105757")
-            .then(res => res.json())
-            .then(json => setProducto(json[0].body))
-        }, 2000)
+        const promesa = new Promise((resolve, reject) => {
+            resolve(arrayProductos)
+        })
+        
+        promesa.then(res => {
+            setProducto(res.find(r => r.id == parametros.id))
+        })
 
     }, [])
 

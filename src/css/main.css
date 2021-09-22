@@ -15108,17 +15108,16 @@ textarea.form-control-lg {
 nav h1, nav .h1 {
   color: teal; }
 
-nav h3, nav .h3 {
-  color: white; }
-
 nav a {
-  text-decoration: none; }
+  text-decoration: none;
+  margin: 10px;
+  padding: 10px; }
 
 nav .navbar-nav {
   width: inherit; }
 
 nav button {
-  width: 100px; }
+  width: 200px; }
 
 #contenedorItems {
   display: flex;
@@ -15136,10 +15135,3 @@ nav button {
     margin-top: 15px;
     padding: 4px;
     border: solid 1px lightgray; }
-
-#itemDetailDiv {
-  padding: 20px;
-  margin: 20px; }
-  #itemDetailDiv img {
-    width: 400px;
-    height: auto; }

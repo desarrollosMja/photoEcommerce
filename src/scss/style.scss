@@ -11,10 +11,12 @@ nav{
         color: teal;
     }
 
+    h3{
+        color: white;
+    }
+
     a{
         text-decoration: none;
-        margin: 10px;
-        padding: 10px;
     }
 
     .navbar-nav{
@@ -22,7 +24,7 @@ nav{
     }
 
     button{
-        width: 200px;
+        width: 100px;
     }
 }
 
@@ -48,6 +50,16 @@ nav{
         margin-top: 15px;
         padding: 4px;
         border: solid 1px lightgray;
+    }
+}
+
+#itemDetailDiv{
+    padding: 20px;
+    margin: 20px;
+
+    img{
+        width: 400px;
+        height: auto;
     }
 }
 
