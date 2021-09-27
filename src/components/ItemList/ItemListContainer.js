@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
 import { arrayProductos } from "../../datos";
+import Spinner from 'react-bootstrap/Spinner';
 
 const ItemListContainer = () => {
     
@@ -11,8 +12,10 @@ const ItemListContainer = () => {
     useEffect(() => {
 
         const promesa = new Promise((resolve, reject) => {
+            document.getElementById("spinner").style.display = "block"
             setTimeout(() => {
                 resolve(arrayProductos)
+                document.getElementById("spinner").style.display = "none"
             }, 2000)
         })
 
@@ -35,7 +38,10 @@ const ItemListContainer = () => {
     }, [parametros])
     
     return (    
-       <ItemList items={productos}/>
+        <>
+            <Spinner id="spinner" animation="grow" />
+            <ItemList items={productos}/>
+        </>
     )
 }
 

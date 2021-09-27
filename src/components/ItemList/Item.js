@@ -1,6 +1,6 @@
 import Card from "react-bootstrap/Card"
 import Button from "react-bootstrap/Button"
-import ItemCount from "./ItemCount"
+import ItemCount from "../ItemCount/ItemCount"
 import { Link } from "react-router-dom"
 
 const Item = (props) => {
@@ -17,7 +17,6 @@ const Item = (props) => {
                     <span>Stock disponible: {stock}</span>
                 </Card.Text>
                 <div class="d-flex align-items-baseline">
-                    <Button variant="primary">Agregar al carrito</Button>
                     <ItemCount stock={5} initial={1} onAdd={() => {}}/>
                 </div>
             </Card.Body>
