@@ -23,8 +23,9 @@ const ItemDetail = (props) => {
             <h3>Precio: $ {price}</h3>
             <h4>Unidades disponibles: {stock}</h4>
             <ItemCount id ={id} stock={10} initial={1} onAdd={agregarAlCarrito}/>
-            <button onClick={carrito.clearCart}>Vaciar carrito</button>
-            <button onClick={carrito.removeItem(id)}>Remover Item</button>
+    
+            <button onClick={() => carrito.clearCart()}>Vaciar carrito</button>
+            <button onClick={() => carrito.removeItem(id)}>Remover Item</button>
         </div>
     )
 }

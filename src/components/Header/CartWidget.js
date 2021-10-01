@@ -12,7 +12,7 @@ const CartWidget = () => {
         <Link to="/cart" className="nav-link">
             <Button variant="turquesa">
                 <i class="bi bi-cart"></i>
-                <Badge pill bg="primary" text="light" className="ms-2">0</Badge>
+                <Badge pill bg="primary" text="light" className="ms-2">{contadorCarrito.contador}</Badge>
             </Button>
         </Link>
     )

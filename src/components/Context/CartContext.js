@@ -7,9 +7,14 @@ const {Provider} = contextoCarrito
 export const ProviderCarrito = ({children}) => {
     
     const [arrayProductos, setArrayProductos] = useState([])
+    
+    //El estado "Contador" sirve para llevar un registro de la cantidad TOTAL
+    //de elementos agregados al carrito. Se va a usar para ir actualizando el
+    //badge del CartWidget
     const [contador, setContador] = useState(0)
 
     let arrayAuxiliar = []
+    let contadorAuxiliar = 0
 
     const addItem = (item, quantity) => {
         if (isInCart(item.id)){
@@ -21,22 +26,21 @@ export const ProviderCarrito = ({children}) => {
             arrayAuxiliar.push(item)
             setArrayProductos(arrayAuxiliar)
         }
-        setContador(quantity)
-        //console.log(arrayProductos)
+        contadorAuxiliar = contador + quantity
+        setContador(contadorAuxiliar)
+        console.log(arrayProductos)
+        console.log(contador)
     }
 
     const removeItem = itemId => {
         arrayProductos.forEach((elemento, indice, array) => {
-            console.log(elemento)
-            console.log(itemId)
             if (elemento.id == itemId) {
-                console.log(elemento)
                 setContador(contador - elemento.cantidadComprada)
                 arrayProductos.splice(indice,1)
             }
         })
-        // console.log(arrayProductos)
-        // console.log(contador)
+        console.log(arrayProductos)
+        console.log(contador)
     }
 
     const clearCart = () => {
@@ -53,6 +57,7 @@ export const ProviderCarrito = ({children}) => {
 
     const valorDelContexto = {
         arrayProductos: arrayProductos,
+        contador: contador,
         addItem: addItem,
         removeItem: removeItem,
         clearCart: clearCart

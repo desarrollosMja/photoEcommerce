@@ -26,12 +26,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
             <button class="btn btn-primary" id="decrementar" onClick={() => reducirContador()}>
                 -
             </button>
-            <Button variant="primary" id="botonItemDetail" onClick={(e) => {
-                console.log(e.isPropagationStopped())
-                e.stopPropagation()
-                console.log(e.isPropagationStopped())
-                onAdd(contador)
-                }}>
+            <Button variant="primary" id="botonItemDetail" onClick={() => onAdd(contador)}>
                 Agregar al carrito
             </Button>
         </div>
