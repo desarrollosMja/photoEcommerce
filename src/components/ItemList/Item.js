@@ -7,20 +7,20 @@ import { contextoCarrito } from "../Context/CartContext"
 
 const Item = (props) => {
 
-    let {id, name, categoria, description, price, stock, pictureUrl, cantidadComprada} = props.item
+    let {id, title, categoryId, description, price, stock, pictureUrl, cantidadComprada} = props.item
     
     const carrito = useContext(contextoCarrito)
 
     const agregarAlCarrito = (cantidad) => {
         cantidadComprada = cantidad
-        carrito.addItem({id, name, categoria, description, price, stock, pictureUrl, cantidadComprada}, cantidad)
+        carrito.addItem({id, title, categoryId, description, price, stock, pictureUrl, cantidadComprada}, cantidad)
     }
 
     return (
         <Card className="m-3 box-shadow" style={{ width: '18rem' }}>
             <Card.Img variant="top" src={pictureUrl} style={{ width: '200px', height: "auto" }} />
             <Card.Body>
-                <Link item={props.item} to={`/item/${id}`}><Card.Title>{name}</Card.Title></Link>
+                <Link item={props.item} to={`/item/${id}`}><Card.Title>{title}</Card.Title></Link>
                 <Card.Text>
                     <span>Precio: $ {price}</span><br/>
                     <span>Stock disponible: {stock}</span>

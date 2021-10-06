@@ -28,7 +28,7 @@ const Cart = () => {
         <div id="carritoContainer">
             <h1 id="siNoHayElementos">No hay productos agregados al carrito. <Link to="/">Volver a HOME</Link></h1>
             {carrito.arrayProductos.map((element, index) => <div id="itemCarrito" key={element.id}>
-                <h5>{element.name} - $ {element.price}</h5>
+                <h5>{element.title} - $ {element.price}</h5>
                 <ItemCountCart cantidadAgregada={element.cantidadComprada} indice={index}/>
                 <Button variant="danger" id="btnQuitarCarrito" onClick={() => {
                         if (carrito.arrayProductos.length == 1){
