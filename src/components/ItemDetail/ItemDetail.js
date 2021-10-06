@@ -22,7 +22,7 @@ const ItemDetail = (props) => {
             <p>{description}</p>
             <h3>Precio: $ {price}</h3>
             <h4>Unidades disponibles: {stock}</h4>
-            <ItemCount id ={id} stock={10} initial={1} onAdd={agregarAlCarrito}/>
+            <ItemCount id ={id} stock={stock} initial={1} onAdd={agregarAlCarrito}/>
         </div>
     )
 }
