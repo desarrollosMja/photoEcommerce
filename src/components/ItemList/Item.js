@@ -4,10 +4,11 @@ import ItemCount from "../ItemCount/ItemCount"
 import { Link } from "react-router-dom"
 import { useContext } from "react"
 import { contextoCarrito } from "../Context/CartContext"
+import "./itemList.css"
 
 const Item = (props) => {
 
-    let {id, title, categoryId, description, price, stock, pictureUrl, cantidadComprada} = props.item
+    let {id, title, categoryId, description, price, stock, pictureUrl, cantidadComprada, destacado} = props.item
     
     const carrito = useContext(contextoCarrito)
 
@@ -17,7 +18,7 @@ const Item = (props) => {
     }
 
     return (
-        <Card className="m-3 box-shadow" style={{ width: '18rem' }}>
+        <Card className={destacado ? "m-3 destacado" : "m-3 box-shadow"} style={{ width: '18rem' }}>
             <Card.Img variant="top" src={pictureUrl} style={{ width: '200px', height: "auto" }} />
             <Card.Body>
                 <Link item={props.item} to={`/item/${id}`}><Card.Title>{title}</Card.Title></Link>

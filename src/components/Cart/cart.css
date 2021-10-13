@@ -61,3 +61,14 @@
     margin-top: 15px;
     border: solid 1px lightgray;
 }
+
+#modalFormularioCuerpo{
+    background-color: teal;
+}
+
+#formularioCompra input{
+    margin: 10px;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    color: black;
+}

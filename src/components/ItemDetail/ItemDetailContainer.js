@@ -16,21 +16,9 @@ const ItemDetailContainer = () => {
         const coleccion = db.collection("productos")
 
         //consulta --> es una promesa
-        const consulta = coleccion.get()
+        const consulta = coleccion.doc(parametros.id).get()
         consulta
-            .then(res => {
-                const documento = res.docs
-                const auxiliarProductos = []
-
-                documento.forEach(producto => {
-                    const consultaFinal = {
-                        id: producto.id,
-                        ...producto.data()
-                    }
-                    auxiliarProductos.push(consultaFinal)
-                })
-                setProducto(auxiliarProductos.find(r => r.id == parametros.id))
-            })
+            .then(res => setProducto(res.data()))
             .catch(err => console.log(err))
     }, [])
 
