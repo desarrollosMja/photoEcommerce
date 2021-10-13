@@ -18,7 +18,7 @@ const Item = (props) => {
     }
 
     return (
-        <Card className={destacado ? "m-3 destacado" : "m-3 box-shadow"} style={{ width: '18rem' }}>
+        <Card className="m-3 box-shadow" style={{ width: '17rem' }}>
             <Card.Img variant="top" src={pictureUrl} style={{ width: '200px', height: "auto" }} />
             <Card.Body>
                 <Link item={props.item} to={`/item/${id}`}><Card.Title>{title}</Card.Title></Link>

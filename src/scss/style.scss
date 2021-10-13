@@ -32,9 +32,30 @@ nav{
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
+    padding: 20px 0px;
 
     .box-shadow{
         box-shadow: 1px 1px 5px 2px lightgray;
+    }
+
+    div{
+        padding: 5px;
+    }
+}
+
+#contenedorItemsDestacados{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    background-color: lightskyblue;
+    padding: 20px 0px;
+
+    .box-shadow{
+        box-shadow: 1px 1px 5px 2px teal;
+    }
+
+    div{
+        padding: 5px;
     }
 }
 

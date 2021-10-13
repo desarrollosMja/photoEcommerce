@@ -1,7 +1,7 @@
 import { contextoCarrito } from '../Context/CartContext'
 import { useContext, useEffect, useState } from 'react'
-import { Link } from "react-router-dom"
-import { firestore } from "../../firebase";
+import { Link, useHistory } from "react-router-dom"
+import { firestore, Timestamp } from "../../firebase";
 import "./cart.css"
 import Button from 'react-bootstrap/Button'
 import Modal from "react-bootstrap/Modal"
@@ -19,6 +19,7 @@ const Cart = () => {
     const [ordenId, setOrdenId] = useState()
 
     const carrito = useContext(contextoCarrito)
+    let history = useHistory()
 
     let montoTotal = 0
 
@@ -33,7 +34,7 @@ const Cart = () => {
                 email: email
             },
             items: carrito.arrayProductos,
-            date: firestore.Timestamp.now(),
+            date: Timestamp.now(),
             total: montoTotal
         }
 
@@ -45,7 +46,7 @@ const Cart = () => {
 
         carrito.clearCart()
         document.getElementById("siHayElementos").style.display = "none"
-        document.getElementById("siNoHayElementos").style.display = "block" 
+        document.getElementById("siNoHayElementos").style.display = "block"
     }
 
     for (const producto of carrito.arrayProductos) {
@@ -100,7 +101,7 @@ const Cart = () => {
                     onHide={() => setFormShow(false)}
                     aria-labelledby="example-modal-sizes-title-sm"
                 >
-                    <Modal.Header closeButton>
+                    <Modal.Header>
                         <Modal.Title id="example-modal-sizes-title-sm">
                             Ingrese sus datos
                         </Modal.Title>
@@ -128,12 +129,13 @@ const Cart = () => {
 
 {/* MODAL DE COMPRA CONFIRMADA */}
                 <Modal
+                    id="modalCompraConfirmada"
                     size="sm"
                     show={smShow}
                     onHide={() => setSmShow(false)}
                     aria-labelledby="example-modal-sizes-title-sm"
                 >
-                    <Modal.Header closeButton>
+                    <Modal.Header closeButton onClick={() => history.push("/")}>
                         <Modal.Title id="example-modal-sizes-title-sm">
                             ¡Compra confirmada!
                         </Modal.Title>
