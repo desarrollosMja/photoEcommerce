@@ -20,6 +20,8 @@ La app consta de distintos componentes:
 11. ItemCountCart: controla la reducción o aumento de items dentro del carrito.
 12. CartContext: crea el array de productos que luego contendrá toda la información de ellos, junto con las funciones para operar el mismo (agregar item, remover item y vaciar carrito). Además en un estado crea un contador para manejar la totalidad de productos agregados al carrito, que servirá para que el componente CartWidget pueda mostrar dicho valor mediante un badge de bootstrap. El CartContext, al ser un contexto, distribuye sus variables y métodos al resto de los componentes.
 
+## Link para observar funcionamiento de la aplicación
+[Video](https://github.com/desarrollosMja/photoEcommerce---Avecilla/blob/main/grabacion-funcionamiento-app.mp4)
 
 # Librerías utilizadas en el proyecto
 * React
