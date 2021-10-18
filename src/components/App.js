@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../css/main.css"
-import Header from './Header/Header';
+import NavBar from './Header/NavBar';
 import ItemListContainer from "./ItemList/ItemListContainer";
 import ItemDetailContainer from "./ItemDetail/ItemDetailContainer";
 import Cart from "./Cart/Cart"
@@ -12,7 +12,7 @@ const App = () => {
     return (
         <BrowserRouter>
             <ProviderCarrito>
-                <Header/>
+                <NavBar/>
                 <Switch>
                     <Route path="/" component={ItemListContainer} exact/>
                     <Route path="/categoria/:id" component={ItemListContainer}/>

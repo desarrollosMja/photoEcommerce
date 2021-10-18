@@ -15469,6 +15469,8 @@ nav button {
     box-shadow: 1px 1px 5px 2px lightgray; }
   #contenedorItems div {
     padding: 5px; }
+  #contenedorItems a {
+    text-decoration: none; }
 
 #contenedorItemsDestacados {
   display: flex;
@@ -15480,12 +15482,14 @@ nav button {
     box-shadow: 1px 1px 5px 2px teal; }
   #contenedorItemsDestacados div {
     padding: 5px; }
+  #contenedorItemsDestacados a {
+    text-decoration: none; }
 
 #item {
   width: 220px;
   margin-left: 10px; }
   #item #incrementar, #item #decrementar {
-    padding: 5px; }
+    padding: 5px 5px; }
   #item #contadorPlace {
     margin-top: 15px;
     padding: 4px;
