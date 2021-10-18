@@ -94,7 +94,6 @@ const Cart = () => {
                     Terminar compra
                 </Button>
 
-{/* MODAL PARA INGRESO DE DATOS DEL USUARIO */}
                 <Modal
                     size="sm"
                     show={formShow}
@@ -127,7 +126,6 @@ const Cart = () => {
                     </Modal.Footer>
                 </Modal>
 
-{/* MODAL DE COMPRA CONFIRMADA */}
                 <Modal
                     id="modalCompraConfirmada"
                     size="sm"
